@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "../style/DivStyle.css"
 class DivStructure extends Component {
+  onClick = () => {
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
+  };
     render() {
       return (
-        <div 
+        <div
+       
         style={
             {
             width:this.props.boxWidth,
@@ -13,7 +19,9 @@ class DivStructure extends Component {
             float: this.props.floatType}
             }
         >
-        <p className="HelloWorld"style={{color:this.props.textColor}}>{this.props.colorName}</p>
+        <p className="HelloWorld"
+         onClick={this.props.onClick}
+        style={{color:this.props.textColor}}>{this.props.colorName}</p>
         </div>
       );
     }
@@ -27,4 +35,5 @@ class DivStructure extends Component {
     boxWidth:PropTypes.string,
     colorName:PropTypes.string,
     textColor:PropTypes.string,
+    onClick: PropTypes.func,
   };

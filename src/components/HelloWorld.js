@@ -24,6 +24,11 @@ componentWillMount(){
     this.getData();
     }
 
+
+    callColorName(text) {
+       alert(text) 
+    }
+
   render() {
     return (
       // console.log("irshad===" + JSON.stringify(this.props.helloWorldList)),
@@ -40,7 +45,10 @@ componentWillMount(){
                     boxHeight={this.state.boxheight}
                     boxWidth={this.state.boxwidth}
                     colorName={todo.colorname}
-                    textColor={"#fff"}/>
+                    textColor={"#fff"}
+                    onClick={() => this.callColorName(todo.colorname)}
+                    
+                    />
                     )
                 }
             </ListGroup>
