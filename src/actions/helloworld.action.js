@@ -33,7 +33,7 @@ export function getHelloWorldList() {
   return async (dispatch, getState, { api }) => {
     dispatch(getHellowWorldListRequest());
     try {
-      const result = await api.get("1ceu9f");
+      const result = await api.get("dihv7");
       const resultJson = await result.json();
       dispatch(getHelloWorldListSuccess(resultJson));
       console.log("vali==="+JSON.stringify(resultJson))
