@@ -22,7 +22,7 @@ class DivStructure extends Component {
         >
         <p className="HelloWorld"
          onClick={this.props.onClick}
-        style={{color:this.props.textColor}}> <Link to={'/SecondScreen'}>{this.props.colorName}</Link></p>
+        style={{color:this.props.textColor}}> <Link to={"/"+this.props.goToNextScreen}>{this.props.colorName}</Link></p>
         </div>
       );
     }
@@ -37,4 +37,5 @@ class DivStructure extends Component {
     colorName:PropTypes.string,
     textColor:PropTypes.string,
     onClick: PropTypes.func,
+    goToNextScreen:PropTypes.string,
   };

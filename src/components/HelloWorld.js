@@ -52,6 +52,7 @@ class HelloWorld extends Component {
                   boxWidth={this.state.boxwidth}
                   colorName={todo.colorname}
                   textColor={"#fff"}
+                  goToNextScreen={"SecondScreen"}
                   onClick={() => this.callColorName(todo.colorname)}
                 />
                
