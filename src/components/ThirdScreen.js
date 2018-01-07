@@ -13,9 +13,11 @@ class ThirdScreen extends Component {
 
   
     componentWillMount(){
+        var getHeight = "Total Height: " + window.innerHeight + "px";
        
         this.setState({
-            divBackground: "#"+this.props.match.params.filter
+            divBackground: "#"+this.props.match.params.filter,
+            boxheight:window.innerHeight + "px"
         })
     }
       render() {
