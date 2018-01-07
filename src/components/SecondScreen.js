@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../style/DivStyle.css"
 import DivStructure from "./DivStructure"
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';         
 class SecondScreen extends Component {
   constructor(props) {
     super(props);
@@ -10,6 +10,11 @@ class SecondScreen extends Component {
         boxwidth: '50%',
         data: []
     };
+    
+}
+
+componentWillMount(){
+  console.log(this.props.match.params.filter)
 }
 // getData() {
 //   //this.props.getHelloWorldList();
@@ -17,15 +22,17 @@ class SecondScreen extends Component {
     
 // }
 
-// componentDidMount() {
-//   this.getData();
+componentDidMount() {
+ // this.getData();
+  alert(this.props.match.params.filter);
  
-// }
+}
 
   render() {
     return (
       
       <div  className="HelloWorld-header">
+     
    
      <DivStructure 
       backgroundColor={"#2ecc71"}

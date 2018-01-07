@@ -3,11 +3,27 @@ import PropTypes from 'prop-types';
 import "../style/DivStyle.css"
 import { Link } from 'react-router-dom';
 class DivStructure extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+     valueFromFirstScreen:""
+    };
+  }
   onClick = () => {
     if (this.props.onClick) {
       this.props.onClick();
     }
   };
+
+  componentWillMount(){
+    var str = this.props.colorName;
+   // alert(str.replace(/#/, ""));
+    var newValue=str.replace(/#/, "")
+    this.setState({
+     valueFromFirstScreen:newValue
+      
+    })
+  }
     render() {
       return (
         <div
@@ -22,7 +38,7 @@ class DivStructure extends Component {
         >
         <p className="HelloWorld"
          onClick={this.props.onClick}
-        style={{color:this.props.textColor}}> <Link to={"/"+this.props.goToNextScreen}>{this.props.colorName}</Link></p>
+        style={{color:this.props.textColor}}> <Link to={"/"+this.props.goToNextScreen+ "/"+this.state.valueFromFirstScreen}>{this.props.colorName}</Link></p>
         </div>
       );
     }
@@ -38,4 +54,5 @@ class DivStructure extends Component {
     textColor:PropTypes.string,
     onClick: PropTypes.func,
     goToNextScreen:PropTypes.string,
+    valuePass:PropTypes.string,
   };

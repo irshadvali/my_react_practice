@@ -12,7 +12,8 @@ class HelloWorld extends Component {
     this.state = {
       boxheight: "150px",
       boxwidth: "50%",
-      data: []
+      data: [],
+      screen:"ThirdScreen"
     };
   }
   getData() {
@@ -38,6 +39,7 @@ class HelloWorld extends Component {
   render() {
     if (!this.props.loading) {
       return (
+        
         <div>
           <Col md={6}>
             <ListGroup>
@@ -52,8 +54,9 @@ class HelloWorld extends Component {
                   boxWidth={this.state.boxwidth}
                   colorName={todo.colorname}
                   textColor={"#fff"}
-                  goToNextScreen={"SecondScreen"}
+                  goToNextScreen={this.state.screen}
                   onClick={() => this.callColorName(todo.colorname)}
+                  valuePass={"khathija"}
                 />
                
               ))}
