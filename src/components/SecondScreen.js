@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../style/DivStyle.css"
 import DivStructure from "./DivStructure"
-
+import { Link } from 'react-router-dom';
 class SecondScreen extends Component {
   constructor(props) {
     super(props);
@@ -11,20 +11,20 @@ class SecondScreen extends Component {
         data: []
     };
 }
-getData() {
-  this.props.getHelloWorldList();
-//   https://api.myjson.com/bins/1ceu9f
+// getData() {
+//   //this.props.getHelloWorldList();
+// //   https://api.myjson.com/bins/1ceu9f
     
-}
+// }
 
-componentDidMount() {
-  this.getData();
+// componentDidMount() {
+//   this.getData();
  
-}
+// }
 
   render() {
     return (
-      console.log("irshad==="+JSON.stringify(this.props.helloWorldList)),
+      
       <div  className="HelloWorld-header">
    
      <DivStructure 

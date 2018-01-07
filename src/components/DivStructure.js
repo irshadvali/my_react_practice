@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "../style/DivStyle.css"
+import { Link } from 'react-router-dom';
 class DivStructure extends Component {
   onClick = () => {
     if (this.props.onClick) {
@@ -21,7 +22,7 @@ class DivStructure extends Component {
         >
         <p className="HelloWorld"
          onClick={this.props.onClick}
-        style={{color:this.props.textColor}}>{this.props.colorName}</p>
+        style={{color:this.props.textColor}}> <Link to={'/SecondScreen'}>{this.props.colorName}</Link></p>
         </div>
       );
     }

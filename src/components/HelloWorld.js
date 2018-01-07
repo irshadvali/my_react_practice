@@ -3,6 +3,8 @@ import "../style/DivStyle.css";
 import DivStructure from "./DivStructure";
 import { ListGroup, Col } from "react-bootstrap";
 import DataResult from "../utils/DataResult";
+import { Link } from 'react-router-dom';
+
 var ASAS;
 class HelloWorld extends Component {
   constructor(props) {
@@ -30,7 +32,7 @@ class HelloWorld extends Component {
   }
 
   callColorName(text) {
-    alert(text);
+    alert(text) 
   }
 
   render() {
@@ -40,6 +42,7 @@ class HelloWorld extends Component {
           <Col md={6}>
             <ListGroup>
               {this.state.data.map((todo, index) => (
+               
                 <DivStructure
                   key={index}
                   index={index}
@@ -51,6 +54,7 @@ class HelloWorld extends Component {
                   textColor={"#fff"}
                   onClick={() => this.callColorName(todo.colorname)}
                 />
+               
               ))}
             </ListGroup>
           </Col>
@@ -59,7 +63,7 @@ class HelloWorld extends Component {
     } else {
       return (
         <div>
-          <p>{"Loading "}</p>
+          <p>{"Loading"}</p>
         </div>
       );
     }
