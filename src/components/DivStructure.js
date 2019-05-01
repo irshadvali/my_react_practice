@@ -38,7 +38,7 @@ class DivStructure extends Component {
         >
         <p className="HelloWorld"
          onClick={this.props.onClick}
-        style={{color:this.props.textColor}}>Click on <Link to={"/"+this.props.goToNextScreen+ "/"+this.state.valueFromFirstScreen}>{this.props.colorName}</Link></p>
+        style={{color:this.props.textColor}}><Link to={"/"+this.props.goToNextScreen+ "/"+this.state.valueFromFirstScreen}>{this.props.colorName}</Link></p>
         </div>
       );
     }
