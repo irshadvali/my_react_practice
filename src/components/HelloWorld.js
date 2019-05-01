@@ -4,7 +4,7 @@ import DivStructure from "./DivStructure";
 import { ListGroup, Col } from "react-bootstrap";
 import DataResult from "../utils/DataResult";
 import { Link } from 'react-router-dom';
-import {circleArea,circlePerimeter,squareArea} from "npm-all-area"
+
 
 var ASAS;
 class HelloWorld extends Component {
